@@ -3,13 +3,11 @@
 #ifndef _MYLIST_H
 #define _MYLIST_H
 
-#include<iostream>
-
 template<typename T>
 class MyList{
 public:
     template<typename L>
-    friend std::ostream &operator<<(std::ostream &os, const List<L> &pt);
+    friend std::ostream &operator<<(std::ostream &os, const MyList<L> &pt);
 
 private:
     // 定义节点结构
@@ -39,6 +37,7 @@ public:
     void pop_back();   // 删除链表末尾的元素
     void pop_front();   // 删除链表开头的元素
     Node *getNode(const T &value);   // 获取指定值的节点
+    T* find(const T &value);   // 链表里是否有指定值
     void remove(const T &value);   // 删除指定值的节点
     bool empty();
     void clear();   // 清空链表
