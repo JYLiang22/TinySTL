@@ -32,3 +32,14 @@ Implementation:
 1. [MyDeque.h](Deque/include/MyDeque.h)
 2. [MyDeque.cpp](Deque/src/MyDeque.cpp)
 3. [MyDeque_test.cpp](Deque/MyDeque_test.cpp)
+
+
+## Implementation of HashTable
+
+[Introduction](HashTable/readme.md)<br>
+
+Implementation:
+
+1. [MyHashTable.h](HashTable/include/MyHashTable.h)
+2. [MyHashTable.cpp](HashTable/src/MyHashTable.cpp)
+3. [MyHashTable_test.cpp](HashTable/MyHashTable_test.cpp)
