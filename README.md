@@ -64,3 +64,13 @@ Implementation:
 1. [MySet.h](Set/include/MySet.h)
 2. [MySet.cpp](Set/src/MySet.cpp)
 3. [MySet_test.cpp](Set/MySet_test.cpp)
+
+
+## Implementation of unordered_set
+[Introduction](unordered_set/readme.md)<br>
+
+Implementation:
+
+1. [Myunordered_set.h](unordered_set/include/Myunordered_set.h)
+2. [Myunordered_set.cpp](unordered_set/src/Myunordered_set.cpp)
+3. [Myunordered_set_test.cpp](unordered_set/Myunordered_set_test.cpp)
