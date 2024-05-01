@@ -74,3 +74,13 @@ Implementation:
 1. [Myunordered_set.h](unordered_set/include/Myunordered_set.h)
 2. [Myunordered_set.cpp](unordered_set/src/Myunordered_set.cpp)
 3. [Myunordered_set_test.cpp](unordered_set/Myunordered_set_test.cpp)
+
+
+## Implementation of multiset
+[Introduction](multiset/readme.md)<br>
+
+Implementation:
+
+1. [Mymultiset.h](multiset/include/Mymultiset.h)
+2. [Mymultiset.cpp](multiset/src/Mymultiset.cpp)
+3. [Mymultiset_test.cpp](multiset/Mymultiset_test.cpp)
