@@ -9,7 +9,6 @@
 #include<unistd.h>
 #include<cstdio>
 #include "./src/MyVector.cpp"
-#include "./include/MyVector.h"
 
 // Function to read memory usage from /proc/self/status
 unsigned long long getMemoryUsage() {
@@ -42,6 +41,7 @@ int main(int argc, char *argv[]){
     // // ¶Á×ß»Ø³µ
     // getchar();
 
+    // std::ifstream in("./file/test.txt");
     std::ifstream in("./file/data.txt");
     if(!in){
         std::cerr << "can not open the file!" << std::endl;
@@ -113,7 +113,7 @@ int main(int argc, char *argv[]){
         }
     }
 
-     // Measure time
+    // Measure time
     auto end = std::chrono::steady_clock::now();
     std::chrono::duration<double> elapsed_seconds = end - start;
     std::cout << "Time taken: " << elapsed_seconds.count() << " seconds" << std::endl;
@@ -124,3 +124,16 @@ int main(int argc, char *argv[]){
 
     return 0;
 }
+
+
+/*
+data.txt
+TinySTL/vector$ ./MyVector_test 
+Time taken: 8.12949 seconds
+Memory usage: 3896 KB
+
+
+test.txt
+Time taken: 6.05163 seconds
+Memory usage: 1760 KB
+*/
