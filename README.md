@@ -11,6 +11,16 @@ Implementation:
 2. [MyVector.cpp](vector/src/MyVector.cpp)
 3. [MyVector_test.cpp](vector/MyVector_test.cpp)
 
+**Optimization of Vector**<br>
+
+Use the first version of [MyVector.cpp](vector/src/MyVector.cpp) to perform the insertion operation and insert the 160,000 pieces of data located [here](vector/file/data.txt). The time and memory consumption are as follows:<br>
+
+```shell
+TinySTL/vector$ ./MyVector_test 
+Time taken: 7.96463 seconds
+Memory usage: 3884 KB
+```
+
 
 ## Implementation of List
 
