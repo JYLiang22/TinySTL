@@ -1,24 +1,60 @@
 #include<iostream>
+#include<fstream>
 #include<algorithm>
 #include<sstream>
 #include<string>
 #include<stdexcept>
+#include<chrono>
+#include<cstring>
+#include<unistd.h>
+#include<cstdio>
 #include "./src/MyVector.cpp"
 #include "./include/MyVector.h"
 
+// Function to read memory usage from /proc/self/status
+unsigned long long getMemoryUsage() {
+    FILE* file = fopen("/proc/self/status", "r");
+    char line[128];
+
+    while (fgets(line, 128, file) != nullptr) {
+        if (strncmp(line, "VmRSS:", 6) == 0) {
+            fclose(file);
+            // Extract memory usage value
+            unsigned long long memory;
+            sscanf(line, "VmRSS: %llu kB", &memory);
+            return memory;
+        }
+    }
+
+    fclose(file);
+    return 0;
+}
+
 int main(int argc, char *argv[]){
+
+    // Measure time
+    auto start = std::chrono::steady_clock::now();
 
     MyVector<int> myVec;
 
-    int N;
-    std::cin >> N;
-    // 读走回车
-    getchar();
+    // int N;
+    // std::cin >> N;
+    // // 读走回车
+    // getchar();
+
+    std::ifstream in("./file/data.txt");
+    if(!in){
+        std::cerr << "can not open the file!" << std::endl;
+        return -1;
+    }
+
+
 
     std::string line;
-    for(int i = 0; i < N; ++i){
+    // for(int i = 0; i < N; ++i){
+    while(std::getline(in, line)){
         // 读取整行
-        std::getline(std::cin, line);
+        // std::getline(in, line);
         std::istringstream iss(line);
         std::string command;
         iss >> command;
@@ -27,6 +63,7 @@ int main(int argc, char *argv[]){
             int value;
             iss >> value;
             myVec.push_back(value);
+            // std::cout << "done" << std::endl;
         }
         else if(command == "print"){
             if(myVec.getSize() == 0){
@@ -75,6 +112,15 @@ int main(int argc, char *argv[]){
             myVec.clear();
         }
     }
+
+     // Measure time
+    auto end = std::chrono::steady_clock::now();
+    std::chrono::duration<double> elapsed_seconds = end - start;
+    std::cout << "Time taken: " << elapsed_seconds.count() << " seconds" << std::endl;
+
+    // Get memory usage
+    unsigned long long memoryUsage = getMemoryUsage();
+    std::cout << "Memory usage: " << memoryUsage << " KB" << std::endl;
 
     return 0;
 }
