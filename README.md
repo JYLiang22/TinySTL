@@ -11,15 +11,21 @@ Implementation:
 2. [MyVector.cpp](vector/src/MyVector.cpp)
 3. [MyVector_test.cpp](vector/MyVector_test.cpp)
 
-**Optimization of Vector**<br>
+**Compare with standard library**<br>
 
-Use the first version of [MyVector.cpp](vector/src/MyVector.cpp) to perform the insertion operation and insert the 160,000 pieces of data located [here](vector/file/data.txt). The time and memory consumption are as follows:<br>
+Use this program [MyVector_test.cpp](vector/src/MyVector_test.cpp) to compare with the vector implemented by the STL standard library[Vector_test.cpp](vector/src/Vector_test.cpp). The total number of operations is 1.5 million. The operation types include add, delete, modify, and check. The operation file is located[here](vector/file/test.txt). The time and memory consumption are as follows:<br>
 
 ```shell
 TinySTL/vector$ ./MyVector_test 
-Time taken: 7.96463 seconds
-Memory usage: 3884 KB
+Time taken: 6.05163 seconds
+Memory usage: 1760 KB
+
+TinySTL/vector$ ./Vector_test 
+Time taken: 4.47986 seconds
+Memory usage: 1856 KB
 ```
+
+It can be found that the vector implemented by myself is not much different from the vector defined by the STL standard library during testing.
 
 
 ## Implementation of List
