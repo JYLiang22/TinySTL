@@ -104,3 +104,13 @@ Implementation:
 1. [Myunordered_map.h](unordered_map/include/Myunordered_map.h)
 2. [Myunordered_map.cpp](unordered_map/src/Myunordered_map.cpp)
 3. [Myunordered_map_test.cpp](unordered_map/Myunordered_map_test.cpp)
+
+
+## Implementation of multimap
+[Introduction](multimap/readme.md)<br>
+
+Implementation:
+
+1. [Mymultimap.h](multimap/include/Mymultimap.h)
+2. [Mymultimap.cpp](multimap/src/Mymultimap.cpp)
+3. [Mymultimap_test.cpp](multimap/Mymultimap_test.cpp)
