@@ -9,11 +9,11 @@ Implementation:
 
 1. [MyVector.h](vector/include/MyVector.h)
 2. [MyVector.cpp](vector/src/MyVector.cpp)
-3. [MyVector_test.cpp](vector/MyVector_test.cpp)
+3. [MyVector_test.cpp](vector/test/MyVector_test.cpp)
 
 **Compare with standard library**<br>
 
-Use this program [MyVector_test.cpp](vector/src/MyVector_test.cpp) to compare with the vector implemented by the STL standard library[Vector_test.cpp](vector/src/Vector_test.cpp). The total number of operations is 1.5 million. The operation types include add, delete, modify, and check. The operation file is located[here](vector/file/test.txt). The time and memory consumption are as follows:<br>
+Use this program [MyVector_test.cpp](vector/test/MyVector_test.cpp) to compare with the vector implemented by the STL standard library [Vector_test.cpp](vector/test/Vector_test.cpp). The total number of operations is 1.5 million. The operation types include add, delete, modify, and check. The operation file is located [here](vector/file/test.txt). The time and memory consumption are as follows:<br>
 
 ```shell
 TinySTL/vector$ ./MyVector_test 
