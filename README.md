@@ -167,7 +167,23 @@ Implementation:
 
 1. [Myunordered_map.h](unordered_map/include/Myunordered_map.h)
 2. [Myunordered_map.cpp](unordered_map/src/Myunordered_map.cpp)
-3. [Myunordered_map_test.cpp](unordered_map/Myunordered_map_test.cpp)
+3. [Myunordered_map_test.cpp](unordered_map/test/Myunordered_map_test.cpp)
+
+**Compare with standard library**<br>
+
+Use this program [Myunordered_map_test.cpp](unordered_map/test/Myunordered_map_test.cpp) to compare with the unordered_map implemented by the STL standard library [unordered_map_test.cpp](unordered_map/test/unordered_map_test.cpp). The total number of operations is 60000. The operation types include add, delete, modify, and check. The operation file is located [here](unordered_map_test/file/test.txt). The time and memory consumption are as follows:<br>
+
+```shell
+TinySTL/unordered_map/test$ ./Myunordered_map_test
+Time taken: 0.228766 seconds
+Memory usage: 1768 KB
+
+TinySTL/unordered_map/test$ ./unordered_map_test 
+Time taken: 0.205543 seconds
+Memory usage: 1936 KB
+```
+
+It can be found that the unordered_map implemented by myself is not much different from the unordered_map defined by the STL standard library during testing.
 
 
 ## Implementation of multimap
