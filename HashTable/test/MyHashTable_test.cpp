@@ -5,7 +5,7 @@
 #include<algorithm>
 #include<functional>
 #include<utility>
-#include "./src/MyHashTable.cpp"
+#include "../src/MyHashTable.cpp"
 
 int main(){
 
