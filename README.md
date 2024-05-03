@@ -36,7 +36,23 @@ Implementation:
 
 1. [MyList.h](List/include/MyList.h)
 2. [MyList.cpp](List/src/MyList.cpp)
-3. [MyList_test.cpp](List/MyList_test.cpp)
+3. [MyList_test.cpp](List//test/MyList_test.cpp)
+
+**Compare with standard library**<br>
+
+Use this program [MyList_test.cpp](List/test/MyList_test.cpp) to compare with the list implemented by the STL standard library [List_test.cpp](List/test/List_test.cpp). The total number of operations is 400000. The operation types include add, delete, modify, and check. The operation file is located [here](List/file/test.txt). The time and memory consumption are as follows:<br>
+
+```shell
+TinySTL/List$ ./MyList_test 
+Time taken: 1.59229 seconds
+Memory usage: 1772 KB
+
+TinySTL/List$ ./List_test 
+Time taken: 1.32541 seconds
+Memory usage: 1760 KB
+```
+
+It can be found that the list implemented by myself is not much different from the list defined by the STL standard library during testing.
 
 
 ## Implementation of Deque
