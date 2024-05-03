@@ -141,7 +141,23 @@ Implementation:
 
 1. [Mymap.h](map/include/Mymap.h)
 2. [Mymap.cpp](map/src/Mymap.cpp)
-3. [Mymap_test.cpp](map/Mymap_test.cpp)
+3. [Mymap_test.cpp](map/test/Mymap_test.cpp)
+
+**Compare with standard library**<br>
+
+Use this program [Mymap_test.cpp](map/test/Mymap_test.cpp) to compare with the map implemented by the STL standard library [Map_test.cpp](map/test/Map_test.cpp). The total number of operations is 60000. The operation types include add, delete, modify, and check. The operation file is located [here](map/file/test.txt). The time and memory consumption are as follows:<br>
+
+```shell
+TinySTL/map/test$ ./Mymap_test
+Time taken: 0.20292 seconds
+Memory usage: 1852 KB
+
+TinySTL/map/test$ ./Map_test 
+Time taken: 0.303157 seconds
+Memory usage: 1880 KB
+```
+
+It can be found that the map implemented by myself is not much different from the map defined by the STL standard library during testing.
 
 
 ## Implementation of unordered_map
