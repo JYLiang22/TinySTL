@@ -125,15 +125,3 @@ int main(int argc, char *argv[]){
     return 0;
 }
 
-
-/*
-data.txt
-TinySTL/vector$ ./MyVector_test 
-Time taken: 8.12949 seconds
-Memory usage: 3896 KB
-
-
-test.txt
-Time taken: 6.05163 seconds
-Memory usage: 1760 KB
-*/

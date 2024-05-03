@@ -125,14 +125,3 @@ int main(int argc, char *argv[]){
     return 0;
 }
 
-
-/*
-data.txt
-Time taken: 0.534996 seconds
-Memory usage: 3892 KB
-
-
-test.txt
-Time taken: 4.47986 seconds
-Memory usage: 1856 KB
-*/
