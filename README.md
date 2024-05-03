@@ -16,11 +16,11 @@ Implementation:
 Use this program [MyVector_test.cpp](vector/test/MyVector_test.cpp) to compare with the vector implemented by the STL standard library [Vector_test.cpp](vector/test/Vector_test.cpp). The total number of operations is 1.5 million. The operation types include add, delete, modify, and check. The operation file is located [here](vector/file/test.txt). The time and memory consumption are as follows:<br>
 
 ```shell
-TinySTL/vector$ ./MyVector_test 
+TinySTL/vector/test$ ./MyVector_test 
 Time taken: 6.05163 seconds
 Memory usage: 1760 KB
 
-TinySTL/vector$ ./Vector_test 
+TinySTL/vector/test$ ./Vector_test 
 Time taken: 4.47986 seconds
 Memory usage: 1856 KB
 ```
@@ -43,11 +43,11 @@ Implementation:
 Use this program [MyList_test.cpp](List/test/MyList_test.cpp) to compare with the list implemented by the STL standard library [List_test.cpp](List/test/List_test.cpp). The total number of operations is 400000. The operation types include add, delete, modify, and check. The operation file is located [here](List/file/test.txt). The time and memory consumption are as follows:<br>
 
 ```shell
-TinySTL/List$ ./MyList_test 
+TinySTL/List/test$ ./MyList_test 
 Time taken: 1.59229 seconds
 Memory usage: 1772 KB
 
-TinySTL/List$ ./List_test 
+TinySTL/List/test$ ./List_test 
 Time taken: 1.32541 seconds
 Memory usage: 1760 KB
 ```
@@ -63,7 +63,23 @@ Implementation:
 
 1. [MyDeque.h](Deque/include/MyDeque.h)
 2. [MyDeque.cpp](Deque/src/MyDeque.cpp)
-3. [MyDeque_test.cpp](Deque/MyDeque_test.cpp)
+3. [MyDeque_test.cpp](Deque/test/MyDeque_test.cpp)
+
+**Compare with standard library**<br>
+
+Use this program [MyDeque_test.cpp](Deque/test/MyDeque_test.cpp) to compare with the deque implemented by the STL standard library [Deque_test.cpp](Deque/test/Deque_test.cpp). The total number of operations is 60000. The operation types include add, delete, modify, and check. The operation file is located [here](Deque/file/test.txt). The time and memory consumption are as follows:<br>
+
+```shell
+TinySTL/Deque/test$ ./MyDeque_test
+Time taken: 0.180536 seconds
+Memory usage: 1924 KB
+
+TinySTL/Deque/test$ ./Deque_test 
+Time taken: 0.158233 seconds
+Memory usage: 1780 KB
+```
+
+It can be found that the deque implemented by myself is not much different from the deque defined by the STL standard library during testing.
 
 
 ## Implementation of HashTable
