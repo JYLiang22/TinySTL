@@ -204,3 +204,14 @@ Implementation:
 1. [Mystack.h](stack/include/Mystack.h)
 2. [Mystack.cpp](stack/src/Mystack.cpp)
 3. [Mystack_test.cpp](stack/Mystack_test.cpp)
+
+
+## Implementation of priority_queue
+
+[Introduction](priority_queue/readme.md)<br>
+
+Implementation:
+
+1. [Mypriority_queue.h](priority_queue/include/Mypriority_queue.h)
+2. [Mypriority_queue.cpp](priority_queue/src/Mypriority_queue.cpp)
+3. [Mypriority_queue_test.cpp](priority_queue/test/Mypriority_queue_test.cpp)
