@@ -4,6 +4,7 @@
 #include<utility>
 #include<initializer_list>
 #include "../include/MyVector_opti.h"
+using namespace std;
 
 template<typename T>
 std::allocator<T> MyVector<T>::alloc;
@@ -42,21 +43,33 @@ void MyVector<T>::free(){
 template<typename T>
 void MyVector<T>::reallocate(){
     size_t newcapacity = getSize() ? 2 * getSize() : 1;
-    // allocate new memory
-    T *newdata = alloc.allocate(newcapacity);
+    
+    // // allocate new memory
+    // T *newdata = alloc.allocate(newcapacity);
 
-    // move the data from the old memory to the new
-    T *dest = newdata;   // points to the next free position in the new array
-    T *elem = elements;   // points to the next element in the old array
-    for(size_t i = 0; i != getSize(); ++i){
-        alloc.construct(dest++, std::move(*elem++));
-    }
+    // // move the data from the old memory to the new
+    // T *dest = newdata;   // points to the next free position in the new array
+    // T *elem = elements;   // points to the next element in the old array
+    // for(size_t i = 0; i != getSize(); ++i){
+    //     alloc.construct(dest++, std::move(*elem++));
+    // }
 
-    free();  // free the old space once we've moved the elements
+    // free();  // free the old space once we've moved the elements
 
-    // update our data structure to point to the new elements
-    elements = newdata;
-    first_free = dest;
+    // // update our data structure to point to the new elements
+    // elements = newdata;
+    // first_free = dest;
+    // cap = elements + newcapacity;
+
+    // use move iterator
+    T *first = alloc.allocate(newcapacity);
+    // move elements
+    T *last = uninitialized_copy(make_move_iterator(begin()), make_move_iterator(end()), first);
+
+    free();
+
+    elements = first;
+    first_free = last;
     cap = elements + newcapacity;
 }
 
@@ -66,12 +79,15 @@ void MyVector<T>::reallocate(size_t newcapacity){
     // alloc new memory
     T *newdata = alloc.allocate(newcapacity);
 
-    // move the data from the old memory to the new
-    T *dest = newdata;   // points to the next free position in the new array
-    T *elem = elements;   // points to the next element in the old array
-    for(size_t i = 0; i != getSize(); ++i){
-        alloc.construct(dest++, std::move(*elem++));
-    }
+    // // move the data from the old memory to the new
+    // T *dest = newdata;   // points to the next free position in the new array
+    // T *elem = elements;   // points to the next element in the old array
+    // for(size_t i = 0; i != getSize(); ++i){
+    //     alloc.construct(dest++, std::move(*elem++));
+    // }
+
+    // use move iterator
+    T *dest = uninitialized_copy(make_move_iterator(begin()), make_move_iterator(end()), newdata);
 
     free();  // free the old space once we've moved the elements
 
