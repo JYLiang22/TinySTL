@@ -1,7 +1,7 @@
 #include<iostream>
 #include<sstream>
 #include<string>
-#include"./src/MyRedBlackTree.cpp"
+#include"../src/MyRedBlackTree.cpp"
 
 int main(){
 
