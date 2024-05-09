@@ -1,7 +1,7 @@
 #include<iostream>
 #include<sstream>
 #include<string>
-#include"./src/Mystack.cpp"
+#include"../src/Mystack.cpp"
 
 int main(){
 
