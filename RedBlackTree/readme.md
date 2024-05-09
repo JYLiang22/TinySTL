@@ -8,7 +8,7 @@
 
 # 介绍
 
-[红黑树介绍](https://www.cnblogs.com/crazymakercircle/p/16320430.html)<br>
+[什么是红黑树，一篇文章解决所有疑惑~~](https://zhuanlan.zhihu.com/p/143585797)<br>
 [红黑树删除篇](https://zhuanlan.zhihu.com/p/145006031)<br>
 
 
