@@ -1,7 +1,7 @@
 #include<iostream>
 #include<sstream>
 #include<string>
-#include"./src/MySet.cpp"
+#include"../src/MySet.cpp"
 
 int main(){
 
